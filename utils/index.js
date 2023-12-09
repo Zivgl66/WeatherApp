@@ -17,7 +17,6 @@ export const sortArray = (array, boolean) => {
 //Storage:
 export const storeData = async (data) => {
   try {
-    // console.log("set: ", data);
     const jsonValue = JSON.stringify(data);
     await AsyncStorage.setItem("@degree", jsonValue);
   } catch (e) {
@@ -28,7 +27,6 @@ export const storeData = async (data) => {
 export const getData = async () => {
   try {
     const jsonValue = await AsyncStorage.getItem("@degree");
-    // console.log("get: ", JSON.parse(jsonValue));
     return jsonValue != null ? JSON.parse(jsonValue) : null;
   } catch (e) {
     console.error("Error", e);
@@ -44,7 +42,6 @@ export const getCityLatandLon = async (city) => {
     };
     const response = await axios.request(options);
     if (response.data.length > 0) {
-      console.log(response.data[0]);
       return response.data[0];
     } else {
       return -1;
@@ -56,8 +53,6 @@ export const getCityLatandLon = async (city) => {
 
 // get distance between two points using longitude and latitude
 export const distanceCalculator = (point, point2) => {
-  console.log(point.lon);
-  console.log(point2.lat);
   if (point.lat == point2.lat && point.lon == point2.lon) {
     return 0;
   } else {
@@ -74,8 +69,6 @@ export const distanceCalculator = (point, point2) => {
     dist = Math.acos(dist);
     dist = (dist * 180) / Math.PI;
     dist = dist * 60 * 1.1515;
-    console.log("name: " + point.country + " " + point.name);
-    console.log("distance " + dist * 1.609344 + "km");
     return dist * 1.609344;
   }
 };

@@ -62,7 +62,6 @@ const JobSearch = () => {
   };
 
   const handleClick = async (city, array) => {
-    console.log("sort city: ", city);
     let cityFound = await getCityLatandLon(city);
     if (cityFound != -1) {
       setTempArray(
