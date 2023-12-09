@@ -42,7 +42,7 @@ npx expo start
 
 In the Home screen you can see your current locations weather. 
  ```md
-    ![Home Page](/repository/assets/screenshots/1.png)
+    ![Home Page](/repository/assets/screenshots/1.png?raw=true)
  ```
 
 
