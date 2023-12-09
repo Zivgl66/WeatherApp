@@ -14,8 +14,8 @@ Using the WeatherApi.com Free API I am getting real time information about the w
 - [Credits](#credits)
 - [License](#license)
 - [Badges](#badges)
-- [How to contribute](#howtocontribute)
 - [Tests](#tests)
+- [Contribute](#contribute)
   
 
 ## Installation
@@ -74,11 +74,6 @@ Third party libraries:
 
 
 
-
-
-
-Search Functionality allows you to search the weather by city (Not Country - weather api doesnt have that functionality, can be solved by using a local list of cities and countries).
-
 ## License
 
 🏆 MIT License
@@ -111,9 +106,6 @@ SOFTWARE.
 ![badmath](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
 
 
-## How to Contribute
-
-Contact me for any questions or if you want to contribute to this project!
 
 ## Tests
 
@@ -152,8 +144,9 @@ describe("WeatherBox component", () => {
 ### This test would check if the WeatherBox component, when provided with specific props (condition, day, degree), correctly renders the day and degree values within its content.
 
 
+## Contribute
 
-## Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
 Give a ⭐️ if you like this project!
 
