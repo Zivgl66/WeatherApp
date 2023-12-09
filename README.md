@@ -59,17 +59,17 @@ npx expo start
 
 
 
-## Credits
+## 🤝 Credits
 
 Third party libraries:
-"@react-native-async-storage/async-storage": "1.17.11",
-"axios": "^1.4.0",
-"expo": "^48.0.7",
-"lottie-react-native": "5.1.4",
-"react-native-bouncy-checkbox": "^3.0.7",
-"react-native-heroicons": "^3.2.0",
-"react-native-switch": "^1.5.1",
-"react-native-svg": "13.4.0",
+- **"@react-native-async-storage/async-storage": "1.17.11",**
+- "axios": "^1.4.0",
+- "expo": "^48.0.7",
+- "lottie-react-native": "5.1.4",
+- "react-native-bouncy-checkbox": "^3.0.7",
+- "react-native-heroicons": "^3.2.0",
+- "react-native-switch": "^1.5.1",
+- "react-native-svg": "13.4.0",
 
 
 
@@ -150,4 +150,10 @@ describe("WeatherBox component", () => {
 ```
 
 ### This test would check if the WeatherBox component, when provided with specific props (condition, day, degree), correctly renders the day and degree values within its content.
+
+
+
+## Contributions, issues, and feature requests are welcome!
+
+Give a ⭐️ if you like this project!
 
