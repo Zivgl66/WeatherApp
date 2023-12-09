@@ -48,7 +48,7 @@ npx expo start
 <img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/2.png" height="700" width="550" >
 
 ### You can sort the search results by alphabetical order or by distance to a city of your choice.
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/4.png" height="200" width="500" >
+<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/4.png" height="150" width="600" >
 
 ### Click on the city you want, and get the latest weather updates
 <img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/3.png" height="700" width="550" >
