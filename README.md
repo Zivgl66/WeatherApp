@@ -51,7 +51,7 @@ npx expo start
 <img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/4.png" height="150" width="600" >
 
 ### Click on the city you want, and get the latest weather updates
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/3.png" height="700" width="550" >
+<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/3.png" height="100%" width="100%" >
 
 
 
