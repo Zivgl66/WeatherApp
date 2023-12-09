@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     // flex: 1,
     marginBottom: 10,
   },
- 
+
   imagesContainer: {
     display: "flex",
     flexDirection: "row",
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   degreeText: {
     textAlign: "center",
     fontFamily: FONT.bold,
-    color: COLORS.primary,
+    color: COLORS.red,
     fontSize: SIZES.huge,
   },
   text: {
@@ -74,7 +74,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontFamily: FONT.medium,
     color: COLORS.primary,
-    fontSize: SIZES.medium,
+    fontSize: SIZES.large,
+    textDecorationLine: "underline",
+    marginBottom: 10,
   },
 });
 
