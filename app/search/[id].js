@@ -71,6 +71,8 @@ const JobSearch = () => {
             distanceCalculator(a, cityFound) - distanceCalculator(b, cityFound)
         )
       );
+    } else {
+      setSortCity("city not found!");
     }
   };
 
