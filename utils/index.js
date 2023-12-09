@@ -35,7 +35,7 @@ export const getData = async () => {
   }
 };
 
-//get a city object from the weather api 
+//get a city object from the weather api
 export const getCityLatandLon = async (city) => {
   try {
     const options = {
@@ -78,4 +78,14 @@ export const distanceCalculator = (point, point2) => {
     console.log("distance " + dist * 1.609344 + "km");
     return dist * 1.609344;
   }
+};
+
+export const compareCitiesDistance = async (array, city) => {
+  let cityFound = await getCityLatandLon(city);
+  if (cityFound != -1) {
+    return array.sort(
+      (a, b) =>
+        distanceCalculator(a, cityFound) - distanceCalculator(b, cityFound)
+    );
+  } else return -1;
 };

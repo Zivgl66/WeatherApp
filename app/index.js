@@ -6,10 +6,6 @@ import { ScreenHeaderBtn, Welcome } from "../components";
 import { storeData } from "../utils";
 import DegreeSwitch from "../components/degreeSwitch/DegreeSwitch";
 
-// TODO: 1.when no results pop a message no results!
-// TODO: 2. sort by A-Z
-// TODO: 3. sort by distance to a place (lat , lon)
-
 const Home = () => {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");

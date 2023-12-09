@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.small,
     ...SHADOWS.medium,
     shadowColor: COLORS.white,
-    // marginTop: -25,
   },
   smallcontainer: {
     flex: 1,

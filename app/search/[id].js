@@ -17,8 +17,14 @@ import { COLORS, icons, SIZES } from "../../constants";
 import styles from "../../styles/search";
 import CityBox from "../../components/cityBox/CityBox";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import { sortArray, getCityLatandLon, distanceCalculator } from "../../utils";
+import {
+  sortArray,
+  getCityLatandLon,
+  distanceCalculator,
+  compareCitiesDistance,
+} from "../../utils";
 import Search from "../../components/search/Search";
+// import useState from "react-usestateref";
 
 const JobSearch = () => {
   const params = useSearchParams();
@@ -69,7 +75,8 @@ const JobSearch = () => {
   };
 
   useEffect(() => {
-    setSearchResult(tempArray);
+    const newArray = tempArray;
+    setSearchResult([...newArray]);
   }, [tempArray]);
 
   useEffect(() => {
@@ -107,8 +114,7 @@ const JobSearch = () => {
         )}
         keyExtractor={(item) => item.id}
         contentContainerStyle={{
-          padding: SIZES.medium,
-          rowGap: SIZES.medium,
+          padding: SIZES.small,
         }}
         ListHeaderComponent={
           <>
@@ -138,7 +144,10 @@ const JobSearch = () => {
                     placeholder={"filter by distance"}
                     searchTerm={sortCity}
                     setSearchTerm={setSortCity}
-                    handleClick={() => handleClick(sortCity, searchResult)}
+                    handleClick={() =>
+                      // compareCitiesDistance(searchResult, sortCity)
+                      handleClick(sortCity, searchResult)
+                    }
                   />
                 </View>
               </View>
