@@ -14,7 +14,7 @@ Using the WeatherApi.com Free API I am getting real time information about the w
 - [Credits](#credits)
 - [License](#license)
 - [Badges](#badges)
-- [How to contribute](#how)
+- [How to contribute](#howtocontribute)
 - [Tests](#tests)
   
 
