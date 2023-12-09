@@ -105,6 +105,7 @@ SOFTWARE.
 ![badmath](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![badmath](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![badmath](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
+![badmath](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
 
 
 ## Features
@@ -119,4 +120,10 @@ Contact me for any questions or if you want to contribute to this project!
 
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+This project includes tests to ensure the correctness and functionality of its components. These tests are written using Jest and React Native Testing Library.
+
+### Running Tests
+After you run the project localy you can access the tests:
+```
+npm test
+```
