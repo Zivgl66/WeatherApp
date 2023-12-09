@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     // flex: 1,
     marginBottom: 10,
   },
+ 
   imagesContainer: {
     display: "flex",
     flexDirection: "row",
@@ -28,7 +29,6 @@ const styles = StyleSheet.create({
   },
   dailyContainer: {
     display: "flex",
-    // flexDirection: "row",
     alignItems: "center",
     marginVertical: 10,
     backgroundColor: COLORS.lightBlue,
@@ -56,6 +56,12 @@ const styles = StyleSheet.create({
   },
   degree: {
     color: COLORS.primary,
+  },
+  degreeText: {
+    textAlign: "center",
+    fontFamily: FONT.bold,
+    color: COLORS.primary,
+    fontSize: SIZES.huge,
   },
   text: {
     textAlign: "center",

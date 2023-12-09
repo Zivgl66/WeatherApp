@@ -1,22 +1,9 @@
-import { useState } from "react";
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  Image,
-  FlatList,
-  TextComponent,
-} from "react-native";
-import { useRouter } from "expo-router";
-
+import React from "react";
+import { View, Text, TextInput, TouchableOpacity, Image } from "react-native";
 import styles from "./welcome.style";
-import { icons, SIZES } from "../../../constants";
+import { icons } from "../../../constants";
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
-  const router = useRouter();
-  // const [activeJobType, setActiveJobType] = useState("Full-time");
-
   return (
     <View>
       <View style={styles.container}>
@@ -32,7 +19,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
             style={styles.searchInput}
             value={searchTerm}
             onChangeText={(text) => setSearchTerm(text)}
-            placeholder="Search by a City or a Country"
+            placeholder="Search by a City"
           />
         </View>
         <TouchableOpacity style={styles.searchBtn} onPress={handleClick}>

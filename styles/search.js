@@ -20,6 +20,14 @@ const styles = StyleSheet.create({
   loaderContainer: {
     marginTop: SIZES.medium,
   },
+  checkboxContainer: {
+    // marginHorizontal: 4,
+    dispaly: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    // flex: 1,
+    marginTop: 5,
+  },
 });
 
 export default styles;

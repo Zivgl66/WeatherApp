@@ -9,9 +9,9 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     padding: SIZES.medium,
     borderRadius: SIZES.small,
-    // backgroundColor: "#FFF",
     ...SHADOWS.medium,
     shadowColor: COLORS.white,
+    // marginTop: -25,
   },
   smallcontainer: {
     flex: 1,

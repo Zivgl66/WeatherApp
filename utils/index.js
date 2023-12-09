@@ -11,6 +11,6 @@ export const checkImageURL = (url) => {
 
 export const sortByAlphabetical = (array) => {
   return array.sort((a, b) =>
-    a.DepartmentName.toLowerCase().localeCompare(b.DepartmentName.toLowerCase())
+    a.name.toLowerCase().localeCompare(b.name.toLowerCase())
   );
 };

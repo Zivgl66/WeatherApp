@@ -6,9 +6,9 @@ const COLORS = {
   darkBlue: "#0F3F69",
   gray: "#83829A",
   gray2: "#C1C0C8",
-
   white: "#F3F4F8",
   lightWhite: "#FAFAFC",
+  red: "#F82727",
 };
 
 const FONT = {
@@ -24,6 +24,7 @@ const SIZES = {
   large: 20,
   xLarge: 24,
   xxLarge: 32,
+  huge: 40,
 };
 
 const SHADOWS = {
