@@ -41,14 +41,14 @@ npx expo start
 ## Usage
 
 ### In the Home screen you can see your current locations weather. 
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/5.png" height="700" width="550" >
+<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/5.png" height="100%" width="100%" >
 
 
 ### Type the city you wish to get the weather for in the search tab.
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/2.png" height="700" width="550" >
+<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/2.png" height="100%" width="100%" style="text-align: center" >
 
 ### You can sort the search results by alphabetical order or by distance to a city of your choice.
-<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/4.png" height="150" width="600" >
+<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/4.png" height="100%" width="100%" >
 
 ### Click on the city you want, and get the latest weather updates
 <img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/3.png" height="100%" width="100%" >
