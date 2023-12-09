@@ -8,7 +8,7 @@ export const weatherAnimations = {
   "Light rain": require("../assets/Animations/Animation - 1702113615590.json"),
   "Patchy snow nearby": require("../assets/Animations/Animation - 1702113345026.json"),
   "Heavy rain": require("../assets/Animations/Animation - 1702113348804.json"),
-  "Heavy rain at times": require("../assets/Animation - 1702113354126.json"),
+  "Heavy rain at times": require("../assets/Animations/Animation - 1702113345026.json"),
   "Thundery outbreaks in nearby": require("../assets/Animations/Animation - 1702113361826.json"),
   Clear: require("../assets/Animations/Animation - 1702113512927.json"),
   "Light rain": require("../assets/Animations/Animation - 1702113530282.json"),
