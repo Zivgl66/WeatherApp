@@ -5,7 +5,7 @@
 
 This is a mobile application designed to help you find out what's the weather around the world! 
 This projet is part of an assignment given to me. I used React Native , Expo Go and JS to tackle it.
-Using the WeatherApi.com Free API I am getting real time information about the weather and displaying it to the user.
+Using the WeatherApi.com Free API I am getting real time information about the weather and displaying it to the user aswell as PIXEL API for images from the cities.
 
 ## Table of Contents (Optional)
 
@@ -72,7 +72,8 @@ Third party libraries:
 - "react-native-svg": "13.4.0",
 
 
-
+ **WEATHERAPI & PEXELAPI**
+ 
 
 ## License
 
