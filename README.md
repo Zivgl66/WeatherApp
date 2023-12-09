@@ -13,6 +13,9 @@ Using the WeatherApi.com Free API I am getting real time information about the w
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Badges](#badges)
+- [How to contribute](#howtocontribute)
+- [Tests](#tests)
   
 
 ## Installation
@@ -107,12 +110,6 @@ SOFTWARE.
 ![badmath](https://img.shields.io/badge/Expo-1B1F23?style=for-the-badge&logo=expo&logoColor=white)
 ![badmath](https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white)
 
-
-## Features
-
-*Check Weather around the world.
-*Sort places by distnace.
-*WeatherAPI data used.
 
 ## How to Contribute
 
