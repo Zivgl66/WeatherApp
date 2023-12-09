@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Stack, useRouter } from "expo-router";
-import { View, ScrollView, SafeAreaView, Switch, Text } from "react-native";
-import { COLORS, icons, images, SIZES } from "../constants";
+import { View, ScrollView, SafeAreaView, Text } from "react-native";
+import { COLORS, icons, SIZES } from "../constants";
 import { ScreenHeaderBtn, Welcome } from "../components";
+import { Switch } from "react-native-switch";
+import { storeData } from "../utils";
+import DegreeSwitch from "../components/degreeSwitch/DegreeSwitch";
+
+// TODO: 1.when no results pop a message no results!
+// TODO: 2. sort by A-Z
+// TODO: 3. sort by distance to a place (lat , lon)
 
 const Home = () => {
   const router = useRouter();
   const [searchTerm, setSearchTerm] = useState("");
-  const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+
+  useEffect(() => {
+    storeData(true);
+  }, []);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
@@ -19,18 +28,7 @@ const Home = () => {
           headerLeft: () => (
             <ScreenHeaderBtn iconUrl={icons.weather} dimension="60%" />
           ),
-          headerRight: () => (
-            <View style={{ display: "flex", alignItems: "center" }}>
-              <Text>C or F</Text>
-              <Switch
-                trackColor={{ false: "#767577", true: "#81b0ff" }}
-                thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-                ios_backgroundColor="#3e3e3e"
-                onValueChange={toggleSwitch}
-                value={isEnabled}
-              />
-            </View>
-          ),
+          headerRight: () => <DegreeSwitch />,
           headerTitle: "",
         }}
       />
@@ -46,6 +44,7 @@ const Home = () => {
             setSearchTerm={setSearchTerm}
             handleClick={() => {
               if (searchTerm) {
+                setSearchTerm("");
                 router.push(`/search/${searchTerm}`);
               }
             }}

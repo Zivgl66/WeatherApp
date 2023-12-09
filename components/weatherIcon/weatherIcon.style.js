@@ -12,11 +12,11 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
   },
-   text: {
+  text: {
     textAlign: "center",
     fontFamily: FONT.bold,
     color: COLORS.primary,
-    fontSize: SIZES.xLarge,
+    fontSize: SIZES.large,
     marginLeft: 5,
   },
 });

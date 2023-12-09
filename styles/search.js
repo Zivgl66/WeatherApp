@@ -6,12 +6,20 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
   },
+  searchHeader: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  smallContainer: {
+    display: "flex",
+  },
   searchTitle: {
     fontFamily: FONT.bold,
     fontSize: SIZES.xLarge,
     color: COLORS.primary,
   },
-  noOfSearchedJobs: {
+  noOfSearchResults: {
     marginTop: 2,
     fontFamily: FONT.medium,
     fontSize: SIZES.small,
@@ -21,11 +29,9 @@ const styles = StyleSheet.create({
     marginTop: SIZES.medium,
   },
   checkboxContainer: {
-    // marginHorizontal: 4,
     dispaly: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    // flex: 1,
     marginTop: 5,
   },
 });

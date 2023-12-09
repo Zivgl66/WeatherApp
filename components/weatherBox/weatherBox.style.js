@@ -8,9 +8,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: 100,
+    height: 100,
     borderRadius: 10,
     padding: 5,
     marginRight: 15,
+  },
+  smallContainer: {
+    marginTop: 60,
+    display: "flex",
+    alignItems: "center",
   },
   image: {
     height: 35,

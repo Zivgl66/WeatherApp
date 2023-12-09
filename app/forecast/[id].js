@@ -1,5 +1,5 @@
 import { Stack, useRouter, useSearchParams } from "expo-router";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   View,
   Text,
@@ -7,7 +7,6 @@ import {
   ScrollView,
   ActivityIndicator,
   RefreshControl,
-  Image,
 } from "react-native";
 import styles from "../../styles/forecast";
 import { ScreenHeaderBtn } from "../../components";
@@ -18,22 +17,28 @@ import { CalendarDaysIcon } from "react-native-heroicons/outline";
 import WeatherBox from "../../components/weatherBox/weatherBox";
 import WeatherIcon from "../../components/weatherIcon/WeatherIcon";
 import { weatherAnimations } from "../../constants";
+import { getData } from "../../utils";
+// import DegreeSwitch from "../../components/degreeSwitch/DegreeSwitch";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const Forecast = () => {
   const params = useSearchParams();
   const router = useRouter();
+  const [degree, setDegree] = useState(AsyncStorage.getItem("@degree"));
+  const [refreshing, setRefreshing] = useState(false);
   const { data, isLoading, error, refetch } = useFetch({
     id: params.id,
     days: 7,
   });
 
-  //   const [activeTab, setActiveTab] = useState(tabs[0]);
-  const [refreshing, setRefreshing] = useState(false);
-
   const onRefresh = useCallback(() => {
     setRefreshing(true);
     refetch();
     setRefreshing(false);
+  }, []);
+
+  useEffect(() => {
+    setDegree(getData());
   }, []);
 
   return (
@@ -52,6 +57,7 @@ const Forecast = () => {
           ),
           headerRight: () => (
             <ScreenHeaderBtn iconUrl={icons.share} dimension="60%" />
+            // <DegreeSwitch />
           ),
           headerTitle: "",
         }}
@@ -84,7 +90,11 @@ const Forecast = () => {
                 <View style={{ width: 250, height: 250 }}>
                   <LottieView
                     style={{ flex: 1 }}
-                    source={weatherAnimations[data?.current?.condition?.text]}
+                    source={
+                      weatherAnimations[data?.current?.condition?.text]
+                        ? weatherAnimations[data?.current?.condition?.text]
+                        : weatherAnimations["other"]
+                    }
                     autoPlay
                     loop
                   />
@@ -93,15 +103,16 @@ const Forecast = () => {
               <View style={{ marginBottom: 10 }}>
                 <Text style={styles.degreeText}>
                   {" "}
-                  {data.current.temp_c}&#176;
+                  {degree?._j ? data?.current.temp_c : data?.current.temp_f}
+                  &#176;
                 </Text>
                 <Text style={styles.textSmall}>
                   {" "}
-                  {data.current.condition.text}{" "}
+                  {data?.current.condition.text}{" "}
                 </Text>
                 <Text style={styles.text}>
-                  The lat is {data.location.lat}, located in the{" "}
-                  {data.location.region} region.{" "}
+                  The lat is {data?.location.lat}, located in the{" "}
+                  {data?.location.region} region.{" "}
                 </Text>
               </View>
               <View style={styles.imagesContainer}>
@@ -117,8 +128,8 @@ const Forecast = () => {
                 />
                 <WeatherIcon
                   image={require("../../assets/icons/sun.png")}
-                  text={data?.current.gust_kph}
-                  degree={"kph"}
+                  text={data?.forecast?.forecastday[0]?.astro?.sunrise}
+                  degree={""}
                 />
               </View>
               <View style={{ marginBottom: 10, padding: 5 }}>
@@ -152,13 +163,23 @@ const Forecast = () => {
                     >
                       {data?.forecast?.forecastday?.map((item, index) => {
                         let date = new Date(item.date);
-                        let options = { weekdat: "long" };
+                        let options = { weekday: "long" };
                         let dayName = date.toLocaleDateString("en-US", options);
                         dayName = dayName.split(",")[0];
                         return (
                           <WeatherBox
+                            condition={
+                              weatherAnimations[item?.day?.condition?.text]
+                                ? weatherAnimations[item?.day?.condition?.text]
+                                : weatherAnimations["other"]
+                            }
                             day={dayName}
-                            degree={item?.day?.avgtemp_c}
+                            degree={
+                              degree?._j
+                                ? item?.day?.avgtemp_c
+                                : item?.day?.avgtemp_f
+                            }
+                            key={"weatherBox" + index}
                           />
                         );
                       })}
