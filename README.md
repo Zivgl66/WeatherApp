@@ -23,6 +23,29 @@ What are the steps required to install your project? Provide a step-by-step desc
 4. run "npx expo start". This will start the project. (I ran it with an emulator of Android using Android Studio)
 5. check out the App!
 
+## Installation
+
+First, clone this repository:
+
+<!-- start:code block -->
+# Clone this repository
+git clone https://github.com/zivgl66/WeatherApp.git
+cd WeatherApp
+
+# Install dependencies
+npm install
+
+# Make an .env file
+API_KEY=f0561c9a3a904d9caa211030222304
+PEXEL_API_KEY=0PoyvD1Cg92r55XokLJytozyIbFADiEWPS9Q82HvPT0mEdAugcBBWaM7
+
+# Run the app
+npx expo start
+
+# Open with Android studio emulator or run on web.
+
+<!-- end:code block -->
+
 ## Usage
 
 In the Home screen you can see your current locations weather. 
