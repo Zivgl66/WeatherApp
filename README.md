@@ -1,5 +1,5 @@
 
-# <Weather App>
+# Weather App
 
 ## Description
 
@@ -19,12 +19,15 @@ Using the WeatherApi.com Free API I am getting real time information about the w
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 1. Download the zip file of the code to your local computer.
 2. Open the code with VS Code.
-3. run "npx expo start". This will start the project. (I ran it with an emulator of Android using Android Studio)
-4. check out the App!
+3. run 'npm i' in the terminal to install all the projects dependencies.
+4. run "npx expo start". This will start the project. (I ran it with an emulator of Android using Android Studio)
+5. check out the App!
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+In the Home screen you can see your current locations weather. 
+Type the city you wish to get the weather for in the search tab.
+You can sort the search results by alphabetical order or by distance to a city of your choice.
 
 To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
@@ -39,6 +42,8 @@ List your collaborators, if any, with links to their GitHub profiles.
 If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 
 If you followed tutorials, include links to those here as well.
+
+Search Functionality allows you to search the weather by city (Not Country - weather api doesnt have that functionality, can be solved by using a local list of cities and countries).
 
 ## License
 
