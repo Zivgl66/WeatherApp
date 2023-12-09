@@ -1,5 +1,5 @@
-import images from "./images";
+import { weatherAnimations } from "./animations";
 import icons from "./icons";
 import { COLORS, FONT, SIZES, SHADOWS } from "./theme";
 
-export { images, icons, COLORS, FONT, SIZES, SHADOWS };
+export { weatherAnimations, icons, COLORS, FONT, SIZES, SHADOWS };

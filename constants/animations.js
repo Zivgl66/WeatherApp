@@ -1,0 +1,17 @@
+export const weatherAnimations = {
+  "Partly cloudy": require("../assets/Animations/Animation - 1701969736685.json"),
+  "Moderate rain": require("../assets/Animations/Animation - 1702113292557.json"),
+  Sunny: require("../assets/Animations/Animation - 1702113298759.json"),
+  Cloudy: require("../assets/Animations/Animation - 1702113315379.json"),
+  Overcast: require("../assets/Animations/Animation - 1702113331145.json"),
+  Mist: require("../assets/Animations/Animation - 1702113322832.json"),
+  "Light rain": require("../assets/Animations/Animation - 1702113615590.json"),
+  "Patchy snow nearby": require("../assets/Animations/Animation - 1702113345026.json"),
+  "Heavy rain": require("../assets/Animations/Animation - 1702113348804.json"),
+  "Heavy rain at times": require("../assets/Animation - 1702113354126.json"),
+  "Thundery outbreaks in nearby": require("../assets/Animations/Animation - 1702113361826.json"),
+  Clear: require("../assets/Animations/Animation - 1702113512927.json"),
+  "Light rain": require("../assets/Animations/Animation - 1702113530282.json"),
+  "Moderate rain at times": require("../assets/Animations/Animation - 1702113544119.json"),
+  other: require("../assets/Animations/Animation - 1702113563790.json"),
+};

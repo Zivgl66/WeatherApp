@@ -17,6 +17,7 @@ import LottieView from "lottie-react-native";
 import { CalendarDaysIcon } from "react-native-heroicons/outline";
 import WeatherBox from "../../components/weatherBox/weatherBox";
 import WeatherIcon from "../../components/weatherIcon/WeatherIcon";
+import { weatherAnimations } from "../../constants";
 
 const Forecast = () => {
   const params = useSearchParams();
@@ -83,7 +84,7 @@ const Forecast = () => {
                 <View style={{ width: 250, height: 250 }}>
                   <LottieView
                     style={{ flex: 1 }}
-                    source={require("../../assets/Animations/partly-cloudy.json")}
+                    source={weatherAnimations[data?.current?.condition?.text]}
                     autoPlay
                     loop
                   />

@@ -20,6 +20,7 @@
     "react-dom": "18.2.0",
     "react-native": "0.71.14",
     "react-native-bouncy-checkbox": "^3.0.7",
+    "react-native-custom-switch": "^1.0.7",
     "react-native-dotenv": "^3.4.8",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-heroicons": "^3.2.0",
