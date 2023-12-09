@@ -27,7 +27,7 @@ What are the steps required to install your project? Provide a step-by-step desc
 
 First, clone this repository:
 
-<!-- start:code block -->
+```
 # Clone this repository
 git clone https://github.com/zivgl66/WeatherApp.git
 cd WeatherApp
@@ -44,7 +44,7 @@ npx expo start
 
 # Open with Android studio emulator or run on web.
 
-<!-- end:code block -->
+```
 
 ## Usage
 
