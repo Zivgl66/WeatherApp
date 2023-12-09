@@ -3,7 +3,6 @@ import { Stack, useRouter } from "expo-router";
 import { View, ScrollView, SafeAreaView, Text } from "react-native";
 import { COLORS, icons, SIZES } from "../constants";
 import { ScreenHeaderBtn, Welcome } from "../components";
-import { Switch } from "react-native-switch";
 import { storeData } from "../utils";
 import DegreeSwitch from "../components/degreeSwitch/DegreeSwitch";
 

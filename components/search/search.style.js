@@ -1,35 +1,8 @@
 import { StyleSheet } from "react-native";
 
-import { COLORS, FONT, SIZES } from "../constants";
+import { COLORS, FONT, SIZES } from "../../constants";
 
 const styles = StyleSheet.create({
-  container: {
-    width: "100%",
-  },
-  searchHeader: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-  },
-  smallContainer: {
-    display: "flex",
-
-    alignItems: "center",
-  },
-  searchTitle: {
-    fontFamily: FONT.bold,
-    fontSize: SIZES.xLarge,
-    color: COLORS.primary,
-  },
-  noOfSearchResults: {
-    marginTop: 2,
-    fontFamily: FONT.medium,
-    fontSize: SIZES.small,
-    color: COLORS.primary,
-  },
-  loaderContainer: {
-    marginTop: SIZES.medium,
-  },
   sortContainer: {
     justifyContent: "center",
     alignItems: "center",
@@ -54,7 +27,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 5,
     padding: 10,
-    marginBottom: 20,
   },
   searchInput: {
     fontFamily: FONT.regular,
@@ -76,5 +48,4 @@ const styles = StyleSheet.create({
     tintColor: COLORS.white,
   },
 });
-
 export default styles;

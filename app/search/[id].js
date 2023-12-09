@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { ActivityIndicator, FlatList, View } from "react-native";
+import {
+  ActivityIndicator,
+  FlatList,
+  View,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import { Text, SafeAreaView } from "react-native";
 import axios from "axios";
@@ -9,15 +17,18 @@ import { COLORS, icons, SIZES } from "../../constants";
 import styles from "../../styles/search";
 import CityBox from "../../components/cityBox/CityBox";
 import BouncyCheckbox from "react-native-bouncy-checkbox";
-import { sortArray } from "../../utils";
+import { sortArray, getCityLatandLon, distanceCalculator } from "../../utils";
+import Search from "../../components/search/Search";
 
 const JobSearch = () => {
   const params = useSearchParams();
   const router = useRouter();
   const [searchResult, setSearchResult] = useState([]);
+  const [tempArray, setTempArray] = useState([]);
   const [searchLoader, setSearchLoader] = useState(false);
   const [searchError, setSearchError] = useState(null);
   const [isChecked, setIsChecked] = useState(false);
+  const [sortCity, setSortCity] = useState("");
 
   const handleSearch = async () => {
     setSearchLoader(true);
@@ -29,7 +40,6 @@ const JobSearch = () => {
         method: "GET",
         url: `https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${params.id}`,
       };
-
       const response = await axios.request(options);
       if (response.data.length > 0) {
         setSearchResult(response.data);
@@ -44,6 +54,23 @@ const JobSearch = () => {
       setSearchLoader(false);
     }
   };
+
+  const handleClick = async (city, array) => {
+    console.log("sort city: ", city);
+    let cityFound = await getCityLatandLon(city);
+    if (cityFound != -1) {
+      setTempArray(
+        array.sort(
+          (a, b) =>
+            distanceCalculator(a, cityFound) - distanceCalculator(b, cityFound)
+        )
+      );
+    }
+  };
+
+  useEffect(() => {
+    setSearchResult(tempArray);
+  }, [tempArray]);
 
   useEffect(() => {
     handleSearch();
@@ -65,9 +92,9 @@ const JobSearch = () => {
           headerTitle: "",
         }}
       />
-
       <FlatList
         data={searchResult}
+        removeClippedSubviews={false}
         renderItem={({ item }) => (
           <CityBox
             location={item}
@@ -79,8 +106,11 @@ const JobSearch = () => {
           />
         )}
         keyExtractor={(item) => item.id}
-        contentContainerStyle={{ padding: SIZES.medium, rowGap: SIZES.medium }}
-        ListHeaderComponent={() => (
+        contentContainerStyle={{
+          padding: SIZES.medium,
+          rowGap: SIZES.medium,
+        }}
+        ListHeaderComponent={
           <>
             <View style={styles.container}>
               <View style={styles.searchHeader}>
@@ -103,6 +133,13 @@ const JobSearch = () => {
                       }}
                     />
                   </View>
+                  <Search
+                    icon={icons.filter}
+                    placeholder={"filter by distance"}
+                    searchTerm={sortCity}
+                    setSearchTerm={setSortCity}
+                    handleClick={() => handleClick(sortCity, searchResult)}
+                  />
                 </View>
               </View>
             </View>
@@ -114,7 +151,7 @@ const JobSearch = () => {
               ) : null}
             </View>
           </>
-        )}
+        }
       />
     </SafeAreaView>
   );
