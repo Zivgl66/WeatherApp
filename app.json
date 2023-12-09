@@ -1,0 +1,18 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "WeatherApp",
+    "slug": "WeatherApp",
+    "extra": {
+      "eas": {
+        "projectId": "49754aa7-2a55-4a15-b874-ca8acecb4673"
+      }
+    },
+    "android": {
+      "package": "com.zivgl66.WeatherApp"
+    }
+  }
+}
