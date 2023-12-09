@@ -44,7 +44,7 @@ In the Home screen you can see your current locations weather.
  ```md
     ![Home Page](/repository/assets/screenshots/1.png?raw=true)
  ```
-
+<img src="https://github.com/Zivgl66/WeatherApp/blob/main/assets/screenshots/1.png" height="100" width="60" >
 
 Type the city you wish to get the weather for in the search tab.
 You can sort the search results by alphabetical order or by distance to a city of your choice.
